@@ -22,7 +22,7 @@ try {
 
   $res = $farm->getBarn(0)->collection();
   foreach ($res as $resOne){
-    echo "$resOne[name] $resOne[sum]<br>\r";
+    echo "$resOne[name] $resOne[sum] $resOne[measuring]<br>\r";
   }
 
 

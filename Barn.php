@@ -72,7 +72,7 @@ class Barn extends Animals
         'measuring' => $type];
       $all +=$sum[$key];
     }
-    $res['sum'] = ['sum'=>$all,'name'=>'Всего']; // добавляем сумму
+    $res['sum'] = ['sum'=>$all,'name'=>'Всего','measuring'=>'ед.']; // добавляем сумму
     $this->collected = $res;
     echo "Вы собрали всё что было! <br>\r";
     return $res;

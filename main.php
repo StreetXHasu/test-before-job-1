@@ -1,5 +1,4 @@
 <?php
-//Стандартная автозагрузка классов
 include 'Farm.php';
 
 try {
@@ -11,7 +10,7 @@ try {
   $farm->getBarn(0)->setName('Хлев 2021');
 
   for ($i = 0; $i < 7; $i++) {
-    $farm->getBarn(0)->addAnimal('Cow');
+    $farm->getBarn(0)->addAnimal('Cow','Кузя');
   }
   for ($i = 0; $i < 15; $i++) {
     $farm->getBarn(0)->addAnimal('Chicken');

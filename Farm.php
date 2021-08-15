@@ -1,7 +1,6 @@
 <?php
 require_once "Barn.php";
 
-
 class Farm extends Barn
 {
 
@@ -26,12 +25,15 @@ class Farm extends Barn
   public function about()
   {
     echo "Добро пожаловать на ферму \"$this->name\"! <br>\r";
-    $count = count($this->getBarns());
+    //количество хлевов
+    $count = $this->getBarns() ? count($this->getBarns()) : 0 ;
     echo "Количечество хлевов на нашей ферме:  $count <br>\r";
     if ($count) {
       echo "Список текущих хлевов:<br>\r";
       foreach ($this->getBarns() as $k => $barn) {
-        echo "№ $k - $barn->name <br>\r";
+        //количество животных
+        $count = $barn->animals ? count($barn->animals) : 0;
+        echo "№ $k - $barn->name - Животных внутри: $count <br>\r";
       }
     }
   }
